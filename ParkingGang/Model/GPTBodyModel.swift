@@ -27,6 +27,7 @@ struct Message: Encodable {
 }
 
 struct Content: Encodable {
+    ///text -> enter text, imageUrl -> insert image. NOT BOTH!
     let type: ContentType
     let text: String?
     let image_url: ImageUrlType?
@@ -47,4 +48,6 @@ struct ImageUrlType: Encodable {
         case low = "low"
     }
 }
+
+
 

@@ -34,12 +34,14 @@ class ViewModel: NSObject, VNDocumentCameraViewControllerDelegate {
     
     func askGPT(question:String,image:String) {
         Task {
-            guard let queryData = gpt.formQuery(question: question, imageDataString: image) else {
+            guard let queryData = gpt.formQuery(question: question,
+                                                imageDataString: image) else {
                 Logger.log("Invalid queryData")
                 return
             }
             do {
-                let data = try await Network.shared.postRequest(.completions, queryData: queryData)
+                let data = try await Network.shared.postRequest(.completions,
+                                                                queryData: queryData)
                 let answer = String(data: data, encoding: .utf8)
                 Logger.log("GPT answer:",answer ?? "no answer")
             } catch {

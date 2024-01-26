@@ -8,19 +8,22 @@
 import Foundation
 struct GPTLogic {
     func formQuery(question:String,imageDataString image:String) -> Data? {
-        let body: GPTBodyModel = .init(model: .gpt4VisionPreview,
-                                       messages: [
-                                        .init(role: .user,
-                                              content: [
-                                                .init(type: .imageUrl,
-                                                      text: question,
-                                                      image_url: .init(url: "data:image/jpeg;base64,\(image)"
-                                                                       , detail: .low))
-                                              ])
-                                       ],
-                                       max_tokens: 200)
+        
+        let fixedImageString = "data:image/jpeg;base64,\(image)"
+        
+        let question = Content(type: .text,
+                               text: question,
+                               image_url: nil)
+        
+        let image = Content(type: .imageUrl,
+                            text: nil,
+                            image_url: .init(url: fixedImageString,
+                                             detail: .low))
+        
+        let message = Message(role: .user, content: [question,image])
+        let query = GPTBodyModel(model: .gpt4VisionPreview, messages: [message], max_tokens: 500)
         do {
-            return try JSONEncoder().encode(body)
+            return try JSONEncoder().encode(query)
         } catch {
             Logger.log(error)
             return nil
