@@ -20,7 +20,7 @@ struct GPTLogic {
                             image_url: .init(url: fixedImageString,
                                              detail: .low))
         
-        let message = Message(role: .user, content: [question,image])
+        let message = QueryMessage(role: .user, content: [question,image])
         let query = GPTBodyModel(model: .gpt4VisionPreview, messages: [message], max_tokens: 500)
         do {
             return try JSONEncoder().encode(query)

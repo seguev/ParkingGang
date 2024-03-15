@@ -10,7 +10,8 @@ struct Logger {
     private init(){}
     static func log(_ items:Any...) {
         #if(DEBUG)
-        print("ℹ️ ",items)
+        print(items)
         #endif
     }
 }
+

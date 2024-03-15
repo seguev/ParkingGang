@@ -24,6 +24,13 @@
 		603E261C2B5EFA23008934B2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E261B2B5EFA23008934B2 /* Secrets.swift */; };
 		603E261E2B5EFCB4008934B2 /* GPTBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E261D2B5EFCB4008934B2 /* GPTBodyModel.swift */; };
 		603E26202B5EFED6008934B2 /* GPTLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E261F2B5EFED6008934B2 /* GPTLogic.swift */; };
+		604FDC1F2B65A8050091DA83 /* XAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 604FDC1E2B65A8050091DA83 /* XAnimation.json */; };
+		604FDC212B65A82A0091DA83 /* VAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 604FDC202B65A82A0091DA83 /* VAnimation.json */; };
+		604FDC242B65A8630091DA83 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 604FDC232B65A8630091DA83 /* Lottie */; };
+		60A5E19B2B63C9B6008F1F2B /* GPTAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A5E19A2B63C9B6008F1F2B /* GPTAnswerModel.swift */; };
+		60A5E19D2B63D180008F1F2B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A5E19C2B63D180008F1F2B /* UserData.swift */; };
+		60A5E1A42B640286008F1F2B /* VideoObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A5E1A32B640286008F1F2B /* VideoObjectDetectionManager.swift */; };
+		60A5E1AD2B640A71008F1F2B /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 60A5E1AA2B6407C8008F1F2B /* YOLOv3Tiny.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,12 @@
 		603E261B2B5EFA23008934B2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		603E261D2B5EFCB4008934B2 /* GPTBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTBodyModel.swift; sourceTree = "<group>"; };
 		603E261F2B5EFED6008934B2 /* GPTLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTLogic.swift; sourceTree = "<group>"; };
+		604FDC1E2B65A8050091DA83 /* XAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XAnimation.json; sourceTree = "<group>"; };
+		604FDC202B65A82A0091DA83 /* VAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VAnimation.json; sourceTree = "<group>"; };
+		60A5E19A2B63C9B6008F1F2B /* GPTAnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTAnswerModel.swift; sourceTree = "<group>"; };
+		60A5E19C2B63D180008F1F2B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		60A5E1A32B640286008F1F2B /* VideoObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoObjectDetectionManager.swift; sourceTree = "<group>"; };
+		60A5E1AA2B6407C8008F1F2B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604FDC242B65A8630091DA83 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +137,9 @@
 				603E26192B5EF9C8008934B2 /* Util */,
 				603E261A2B5EF9DF008934B2 /* Networking */,
 				603E25DF2B5EF191008934B2 /* Main.storyboard */,
+				604FDC1E2B65A8050091DA83 /* XAnimation.json */,
+				604FDC202B65A82A0091DA83 /* VAnimation.json */,
+				60A5E1AA2B6407C8008F1F2B /* YOLOv3Tiny.mlmodel */,
 				603E25E52B5EF192008934B2 /* Assets.xcassets */,
 				603E25E72B5EF192008934B2 /* LaunchScreen.storyboard */,
 				603E25EA2B5EF192008934B2 /* Info.plist */,
@@ -151,8 +168,11 @@
 		603E260E2B5EF302008934B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60A5E1A32B640286008F1F2B /* VideoObjectDetectionManager.swift */,
 				603E261D2B5EFCB4008934B2 /* GPTBodyModel.swift */,
 				603E261F2B5EFED6008934B2 /* GPTLogic.swift */,
+				60A5E19A2B63C9B6008F1F2B /* GPTAnswerModel.swift */,
+				60A5E19C2B63D180008F1F2B /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +227,9 @@
 			dependencies = (
 			);
 			name = ParkingGang;
+			packageProductDependencies = (
+				604FDC232B65A8630091DA83 /* Lottie */,
+			);
 			productName = ParkingGang;
 			productReference = 603E25D62B5EF191008934B2 /* ParkingGang.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 603E25CD2B5EF191008934B2;
+			packageReferences = (
+				604FDC222B65A8630091DA83 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 603E25D72B5EF191008934B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				603E25E92B5EF192008934B2 /* LaunchScreen.storyboard in Resources */,
+				604FDC1F2B65A8050091DA83 /* XAnimation.json in Resources */,
+				604FDC212B65A82A0091DA83 /* VAnimation.json in Resources */,
 				603E25E62B5EF192008934B2 /* Assets.xcassets in Resources */,
 				603E25E12B5EF191008934B2 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A5E19D2B63D180008F1F2B /* UserData.swift in Sources */,
 				603E25DE2B5EF191008934B2 /* ViewController.swift in Sources */,
 				603E261C2B5EFA23008934B2 /* Secrets.swift in Sources */,
 				603E25E42B5EF191008934B2 /* ParkingGang.xcdatamodeld in Sources */,
@@ -330,9 +359,12 @@
 				603E26142B5EF7C0008934B2 /* Network.swift in Sources */,
 				603E25DA2B5EF191008934B2 /* AppDelegate.swift in Sources */,
 				603E26162B5EF8F4008934B2 /* Logger.swift in Sources */,
+				60A5E1AD2B640A71008F1F2B /* YOLOv3Tiny.mlmodel in Sources */,
 				603E25DC2B5EF191008934B2 /* SceneDelegate.swift in Sources */,
+				60A5E1A42B640286008F1F2B /* VideoObjectDetectionManager.swift in Sources */,
 				603E26122B5EF5BF008934B2 /* ViewModel.swift in Sources */,
 				603E26182B5EF988008934B2 /* Constants.swift in Sources */,
+				60A5E19B2B63C9B6008F1F2B /* GPTAnswerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		604FDC222B65A8630091DA83 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		604FDC232B65A8630091DA83 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 604FDC222B65A8630091DA83 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		603E25E22B5EF191008934B2 /* ParkingGang.xcdatamodeld */ = {
